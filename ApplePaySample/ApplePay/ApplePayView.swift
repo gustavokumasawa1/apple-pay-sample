@@ -20,7 +20,7 @@ class ApplePayView: UIView {
     }()
     
     private weak var delegate: ApplePayViewDelegate?
-    private let payHandler = ApplePayHandler()
+    private let viewModel = ApplePayViewModel()
     
     init(delegate: ApplePayViewDelegate, frame: CGRect = .zero) {
         super.init(frame: frame)
@@ -35,7 +35,7 @@ class ApplePayView: UIView {
 
 extension ApplePayView {
     private func setupInterface() {
-        switch payHandler.checkApplePayStatus() {
+        switch viewModel.checkApplePayStatus() {
         case .canMakePayments:
             applePayButton.addTarget(self, action: #selector(payPressed), for: .touchUpInside)
             addSubview(applePayButton)
@@ -66,7 +66,7 @@ extension ApplePayView {
             return
         }
         
-        payHandler.startPayment(withItems: items) { [weak self] success in
+        viewModel.startPayment(withItems: items) { [weak self] success in
             if success {
                 self?.delegate?.paymentSuccess()
             } else {

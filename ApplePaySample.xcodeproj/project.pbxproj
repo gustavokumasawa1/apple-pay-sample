@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BAB0C9602B3EED6E00657B4E /* ApplePayHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB0C95F2B3EED6E00657B4E /* ApplePayHandler.swift */; };
+		BAB0C9602B3EED6E00657B4E /* ApplePayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB0C95F2B3EED6E00657B4E /* ApplePayViewModel.swift */; };
 		BAB0C9632B3EF2A700657B4E /* ApplePayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB0C9622B3EF2A700657B4E /* ApplePayView.swift */; };
 		BAB0C9672B3EF69100657B4E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB0C9662B3EF69100657B4E /* Item.swift */; };
 		BAD646CF2B3E0A1C00B7C644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD646CE2B3E0A1C00B7C644 /* AppDelegate.swift */; };
@@ -41,7 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BAB0C95F2B3EED6E00657B4E /* ApplePayHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayHandler.swift; sourceTree = "<group>"; };
+		BAB0C95F2B3EED6E00657B4E /* ApplePayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayViewModel.swift; sourceTree = "<group>"; };
 		BAB0C9622B3EF2A700657B4E /* ApplePayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayView.swift; sourceTree = "<group>"; };
 		BAB0C9662B3EF69100657B4E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		BAD646CB2B3E0A1C00B7C644 /* ApplePaySample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApplePaySample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,11 +86,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA336C472B4436250089B450 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BAD646CE2B3E0A1C00B7C644 /* AppDelegate.swift */,
+				BAD646D02B3E0A1C00B7C644 /* SceneDelegate.swift */,
+				BAD646D42B3E0A1C00B7C644 /* Main.storyboard */,
+				BAD646D72B3E0A1D00B7C644 /* Assets.xcassets */,
+				BAD646D92B3E0A1D00B7C644 /* LaunchScreen.storyboard */,
+				BAD646DC2B3E0A1D00B7C644 /* Info.plist */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		BAB0C9642B3EF66E00657B4E /* ApplePay */ = {
 			isa = PBXGroup;
 			children = (
 				BAB0C9622B3EF2A700657B4E /* ApplePayView.swift */,
-				BAB0C95F2B3EED6E00657B4E /* ApplePayHandler.swift */,
+				BAB0C95F2B3EED6E00657B4E /* ApplePayViewModel.swift */,
 			);
 			path = ApplePay;
 			sourceTree = "<group>";
@@ -126,17 +139,12 @@
 		BAD646CD2B3E0A1C00B7C644 /* ApplePaySample */ = {
 			isa = PBXGroup;
 			children = (
+				BA336C472B4436250089B450 /* Core */,
 				BAB0C9652B3EF68900657B4E /* Models */,
 				BAD647042B3E129E00B7C644 /* ViewModels */,
 				BAD647032B3E129500B7C644 /* Views */,
 				BAD647022B3E128E00B7C644 /* Enums */,
 				BAB0C9642B3EF66E00657B4E /* ApplePay */,
-				BAD646CE2B3E0A1C00B7C644 /* AppDelegate.swift */,
-				BAD646D02B3E0A1C00B7C644 /* SceneDelegate.swift */,
-				BAD646D42B3E0A1C00B7C644 /* Main.storyboard */,
-				BAD646D72B3E0A1D00B7C644 /* Assets.xcassets */,
-				BAD646D92B3E0A1D00B7C644 /* LaunchScreen.storyboard */,
-				BAD646DC2B3E0A1D00B7C644 /* Info.plist */,
 			);
 			path = ApplePaySample;
 			sourceTree = "<group>";
@@ -318,7 +326,7 @@
 				BAD646CF2B3E0A1C00B7C644 /* AppDelegate.swift in Sources */,
 				BAD646FF2B3E0FC900B7C644 /* ViewModel.swift in Sources */,
 				BAB0C9672B3EF69100657B4E /* Item.swift in Sources */,
-				BAB0C9602B3EED6E00657B4E /* ApplePayHandler.swift in Sources */,
+				BAB0C9602B3EED6E00657B4E /* ApplePayViewModel.swift in Sources */,
 				BAB0C9632B3EF2A700657B4E /* ApplePayView.swift in Sources */,
 				BAD646D12B3E0A1C00B7C644 /* SceneDelegate.swift in Sources */,
 			);

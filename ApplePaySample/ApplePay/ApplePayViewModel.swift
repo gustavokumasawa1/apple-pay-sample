@@ -3,7 +3,7 @@ import PassKit
 
 typealias ApplePayPaymentCompletion = (_ success: Bool) -> Void
 
-class ApplePayHandler: NSObject {
+class ApplePayViewModel: NSObject {
     private var paymentController: PKPaymentAuthorizationController?
     private var paymentCompletion: ApplePayPaymentCompletion!
     private var paymentStatus = PKPaymentAuthorizationStatus.failure
@@ -45,7 +45,7 @@ class ApplePayHandler: NSObject {
     }
 }
 
-extension ApplePayHandler: PKPaymentAuthorizationControllerDelegate {
+extension ApplePayViewModel: PKPaymentAuthorizationControllerDelegate {
     func paymentAuthorizationController(
         _ controller: PKPaymentAuthorizationController,
         didAuthorizePayment payment: PKPayment,
@@ -78,7 +78,7 @@ extension ApplePayHandler: PKPaymentAuthorizationControllerDelegate {
     }
 }
 
-extension ApplePayHandler {
+extension ApplePayViewModel {
     private func convertToSummaryItems(_ items: [Item]) -> [PKPaymentSummaryItem] {
         var total: Double = 0.0
         let summaryItems: [PKPaymentSummaryItem] = items.map { item in
