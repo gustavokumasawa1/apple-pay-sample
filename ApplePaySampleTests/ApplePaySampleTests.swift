@@ -2,11 +2,10 @@
 //  ApplePaySampleTests.swift
 //  ApplePaySampleTests
 //
-//  Created by Virtual Machine on 28/12/23.
+//  Created by Virtual Machine on 02/01/24.
 //
 
 import XCTest
-@testable import ApplePaySample
 
 final class ApplePaySampleTests: XCTestCase {
 
@@ -28,7 +27,7 @@ final class ApplePaySampleTests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        self.measure {
+        measure {
             // Put the code you want to measure the time of here.
         }
     }

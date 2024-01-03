@@ -4,7 +4,7 @@ import PassKit
 protocol ApplePayViewDelegate: AnyObject {
     func paymentSuccess()
     func paymentFailure()
-    func getItems() -> [Item]
+    func getCheckoutItems() -> [Item]
 }
 
 class ApplePayView: UIView {
@@ -62,7 +62,7 @@ extension ApplePayView {
     }
     
     @objc private func payPressed(sender: AnyObject) {
-        guard let items = delegate?.getItems() else {
+        guard let items = delegate?.getCheckoutItems() else {
             return
         }
         

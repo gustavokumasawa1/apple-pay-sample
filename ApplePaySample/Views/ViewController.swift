@@ -50,10 +50,7 @@ extension ViewController: ApplePayViewDelegate {
         applePayStatusLabel.text = "Transação falhou"
     }
     
-    func getItems() -> [Item] {
-        [
-            Item(id: UUID(), name: "Café espresso", value: 8.90),
-            Item(id: UUID(), name: "Croissant", value: 9.00)
-        ]
+    func getCheckoutItems() -> [Item] {
+        return viewModel.items
     }
 }
